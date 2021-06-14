@@ -8,7 +8,7 @@
         <table class="table">
             <thead class="thead-light">
             <tr>
-                <th scope="col">Código</th>
+                <th scope="col">Codigo</th>
                 <th scope="col">Nombres</th>
                 <th scope="col">Apellidos</th>
                 <th scope="col">Edad</th>
@@ -20,11 +20,11 @@
             <tbody>
             @foreach($students as $student)
                 <tr>
-                    <td>{{ $student->cne }}</td>
-                    <td>{{ $student->firstName }}</td>
-                    <td>{{ $student->secondName }}</td>
-                    <td>{{ $student->age }}</td>
-                    <td>{{ $student->speciality }}</td>
+                    <td>{{ $student->codigo }}</td>
+                    <td>{{ $student->nombre }}</td>
+                    <td>{{ $student->apellido }}</td>
+                    <td>{{ $student->edad }}</td>
+                    <td>{{ $student->genero }}</td>
                     <td>
 
                         <a href="{{ url('/edit/'.$student->id) }}" class="btn btn-sm btn-warning">Editar</a>

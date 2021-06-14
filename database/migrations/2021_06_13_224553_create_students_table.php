@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateStudentsTable extends Migration
 {
@@ -14,7 +14,12 @@ class CreateStudentsTable extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('codigo') ;
+            $table->string('nombre') ;
+            $table->string('apellido') ;
+            $table->integer('edad') ;
+            $table->string('genero');
             $table->timestamps();
         });
     }
