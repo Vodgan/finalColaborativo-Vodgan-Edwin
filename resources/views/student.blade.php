@@ -47,18 +47,18 @@
                         <form action="{{ url('/store') }}" method="post">
                             @csrf
                             <div class="form-group">
-                                <label>Código</label>
+                                <label>Codigo</label>
                                 <input name="codigo" type="text" class="form-control"  placeholder="Ingrese el codigo">
                             </div>
                             <div class="form-group">
-                                <label>Nombres</label>
+                                <label>Nombre</label>
                                 <input name="nombre" type="text" class="form-control"  placeholder="Ingrese el nombre">
                             </div>
 
 
                             <div class="form-group">
                                 <label>Apellidos</label>
-                                <input name="apellidos" type="text" class="form-control"  placeholder="Ingrese apellidos">
+                                <input name="apellido" type="text" class="form-control"  placeholder="Ingrese apellidos">
                             </div>
 
                             <div class="form-group">
@@ -103,24 +103,24 @@
                         <form action="{{ url('/update/'.$student->id) }}" method="post">
                             @csrf
                             <div class="form-group">
-                                <label>Código</label>
-                                <input value="{{ $student->cne }}" name="cne" type="text" class="form-control"  placeholder="Enter cne">
+                                <label>Codigo</label>
+                                <input value="{{ $student->codigo }}" name="cne" type="text" class="form-control"  placeholder="Ingrese el codigo">
                             </div>
                             <div class="form-group">
                                 <label>Nombres</label>
-                                <input value="{{ $student->firstName }}" name="firstName" type="text" class="form-control"  placeholder="Enter the first name">
+                                <input value="{{ $student->nombre }}" name="firstName" type="text" class="form-control"  placeholder="Ingrese los nombre">
                             </div>
                             <div class="form-group">
                                 <label>Apellidos</label>
-                                <input value="{{ $student->secondName }}" name="secondName" type="text" class="form-control"  placeholder="Enter second name">
+                                <input value="{{ $student->apellido }}" name="secondName" type="text" class="form-control"  placeholder="Ingrese apellidos">
                             </div>
                             <div class="form-group">
                                 <label>Edad</label>
-                                <input value="{{ $student->age }}" name="age" type="text" class="form-control"  placeholder="Enter the Age">
+                                <input value="{{ $student->edad }}" name="age" type="text" class="form-control"  placeholder="Ingrese edad">
                             </div>
                             <div class="form-group">
                                 <label>Genero</label>
-                                <input value="{{ $student->speciality }}" name="speciality" type="text" class="form-control"  placeholder="Enter Sepeciality">
+                                <input value="{{ $student->genero }}" name="speciality" type="text" class="form-control"  placeholder="Ingrese género">
                             </div>
                             <input type="submit" class="btn btn-info" value="Actualizar">
                             <input type="reset" class="btn btn-warning" value="Reiniciar">
